@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import styles from './Main.module.scss';
-import Header from '../../widgets/header/Header';
+import Header from '../../widgets/Header/Header';
 import SecondBlock from './ui/secondBlock/SecondBlock';
 const ThirdBlock = lazy(() => import('./ui/thirdBlock/ThirdBlock'));
 const FourthBlock = lazy(() => import('./ui/fourthBlock/FourthBlock'));

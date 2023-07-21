@@ -1,6 +1,6 @@
 import styles from './Nav.module.scss';
 import { NavLink } from 'react-router-dom';
-import { callNav } from './callNav.js';
+import { callNav } from './callNav';
 
 const Nav = () => {
 	return (

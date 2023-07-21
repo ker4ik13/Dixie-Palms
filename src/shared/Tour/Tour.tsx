@@ -1,5 +1,5 @@
 import styles from './Tour.module.scss';
-import YellowButton from '../seeButton/YellowButton';
+import YellowButton from '../YellowButton/YellowButton';
 
 const Tour = ({ item }) => {
 	return (

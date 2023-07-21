@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './styles/styles';
 import Main from '../pages/MainPage/Main';
-import Layout from '../shared/ui/layout/Layout';
+import Layout from '../shared/Layout/Layout';
 const GuidePage = lazy(() => import('../pages/GuidePage/Guide'));
 const BlogPage = lazy(() => import('../pages/BlogPage/Blog'));
 import { Provider } from 'react-redux';

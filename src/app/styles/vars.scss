@@ -1,0 +1,57 @@
+$main-color: #FDCE00;
+$blue: #0C4C60;
+$beige: #FDF6CC;
+
+@mixin T1() {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+@mixin T2() {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+@mixin T3() {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+@mixin T4() {
+	font-size: 26px;
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+@mixin T5() {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+@mixin T14() {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+@mixin T15() {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+@mixin T16() {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+@mixin T21() {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2;
+}

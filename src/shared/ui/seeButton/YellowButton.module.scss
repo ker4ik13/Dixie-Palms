@@ -1,0 +1,21 @@
+@import '@/app/styles/vars';
+
+.button{
+	color: $blue;
+	background-color: $main-color;
+	@include T5();
+	padding: 6px 10px;
+	&.medium{
+		@include T3();
+		padding: 10px;
+	}
+	&.big{
+		@include T3();
+		padding: 16px 40px;
+	}
+	&.round{
+		@include T3();
+		padding: 16px 40px;
+		border-radius: 50px;
+	}
+}

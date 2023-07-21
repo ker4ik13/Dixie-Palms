@@ -1,5 +1,5 @@
 export const callNav = (event, styles) => {
-    const nav = event.currentTarget
+    const nav = event.currentTarget;
     nav.classList.toggle(styles.active);
     nav.previousSibling.classList.toggle(styles.list);
     document.body.classList.toggle(styles.overflow);

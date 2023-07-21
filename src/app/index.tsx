@@ -3,38 +3,53 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './styles/styles';
 import Main from '../pages/MainPage/Main';
 import Layout from '../shared/Layout/Layout';
+import Preloader from '@/widgets/Preloader/Preloader';
+import ToursPage from '@/pages/ToursPage/ToursPage';
+import TourPage from '@/pages/TourPage/TourPage';
 const GuidePage = lazy(() => import('../pages/GuidePage/Guide'));
 const BlogPage = lazy(() => import('../pages/BlogPage/Blog'));
-import { Provider } from 'react-redux';
-import store from '../store/store';
 
 const App = () => {
 	return (
 		<BrowserRouter>
-			<Provider store={store}>
-				<Routes>
-					<Route path='/' element={<Layout />}>
-						<Route path='index.html' element={<Navigate to='/' />} />
-						<Route index element={<Main />} />
-						<Route
-							path='guide'
-							element={
-								<Suspense fallback={<div>Loading...</div>}>
-									<GuidePage />
-								</Suspense>
-							}
-						/>
-						<Route
-							path='blog'
-							element={
-								<Suspense fallback={<div>Loading...</div>}>
-									<BlogPage />
-								</Suspense>
-							}
-						/>
-					</Route>
-				</Routes>
-			</Provider>
+			<Routes>
+				<Route path='/' element={<Layout />}>
+					<Route path='index.html' element={<Navigate to='/' />} />
+					<Route index element={<Main />} />
+					<Route
+						path='tours'
+						element={
+							<Suspense fallback={<Preloader />}>
+								<ToursPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='tours/:someTour'
+						element={
+							<Suspense fallback={<Preloader />}>
+								<TourPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='guide'
+						element={
+							<Suspense fallback={<Preloader />}>
+								<GuidePage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path='blog'
+						element={
+							<Suspense fallback={<Preloader />}>
+								<BlogPage />
+							</Suspense>
+						}
+					/>
+				</Route>
+			</Routes>
 		</BrowserRouter>
 	);
 };

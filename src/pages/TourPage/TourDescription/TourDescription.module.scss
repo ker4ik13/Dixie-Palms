@@ -1,0 +1,101 @@
+@import '@/app/styles/vars';
+
+.TourDescription {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.firstRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	gap: 30px;
+}
+
+.firstDay {
+	background-color: $beige;
+	padding: 30px 0;
+	max-width: 525px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 30px;
+	padding-bottom: 140px;
+}
+
+.title {
+	@include T4();
+	text-align: left;
+	color: $blue;
+	cursor: text;
+	padding: 0 30px;
+}
+
+.img {
+	width: 100%;
+	max-height: 340px;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.description {
+	@include T5();
+	color: $blue;
+	cursor: text;
+	padding: 0 30px;
+	position: relative;
+	z-index: 1;
+}
+
+.bluePalm {
+	position: absolute;
+	bottom: -90%;
+	right: -60%;
+	z-index: 0;
+	transform: rotate(-90deg);
+}
+
+.secondDay {
+	background-color: $beige;
+	max-width: 726px;
+	width: 100%;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 30px;
+}
+
+.thirdDay {
+	background-color: $beige;
+	width: 100%;
+	margin: 50px auto 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.thirdDay_wrapper {
+	padding: 30px;
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 50px;
+}
+
+.realPalm {
+	position: absolute;
+	top: 50%;
+	right: -10%;
+	transform: translate(0, -50%);
+	z-index: 0;
+}

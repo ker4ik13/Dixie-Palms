@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.scss';
 import Nav from '../Nav/Nav';
 import clouds from '@/pages/MainPage/img/clouds.png';
-import Footer from '@/widgets/footer/Footer';
+import Footer from '@/widgets/Footer/Footer';
 
 const Layout = () => {
 	return (

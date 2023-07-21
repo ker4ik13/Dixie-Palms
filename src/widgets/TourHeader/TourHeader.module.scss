@@ -1,0 +1,78 @@
+@import '@/app/styles/vars';
+
+.header {
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px;
+}
+
+.header_text {
+	text-align: right;
+	color: $blue;
+}
+
+.header__title {
+	@include T4();
+	position: relative;
+	z-index: 2;
+	margin-bottom: 20px;
+	cursor: text;
+	max-width: 500px;
+	text-align: right;
+}
+
+.header__subtitle {
+	max-width: 550px;
+	@include T5();
+	position: relative;
+	z-index: 2;
+	margin-bottom: 40px;
+	color: $blue;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -moz-box;
+	display: -webkit-box;
+	-webkit-line-clamp: 10;
+	-webkit-box-orient: vertical;
+	line-clamp: 10;
+	box-orient: vertical;
+	cursor: text;
+}
+
+.img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.header__ellipse {
+	max-width: 1220px;
+	width: 100%;
+	height: 900px;
+	background-color: #FDCE00;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(50%, -50%);
+	z-index: 1;
+}
+
+.palm {
+	position: absolute;
+	bottom: -90%;
+	right: -35%;
+	z-index: 1;
+	transform: rotate(-60deg);
+}

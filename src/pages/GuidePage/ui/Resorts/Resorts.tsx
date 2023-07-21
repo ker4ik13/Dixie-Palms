@@ -1,24 +1,22 @@
-import { useEffect, useState } from 'react';
 import styles from './Resorts.module.scss';
-import ResortsCard from './ui/ResortsCard';
+import ResortsCardType from '@/types/ResortsCardType';
+import ResortsCard from './ResortsCard/ResortsCard';
 import bagams from './img/bagams.jpg';
 import maldives from './img/maldives.jpg';
 import thailand from './img/thailand.jpg';
 
-const Resorts = (props) => {
-	const [resorts, setResorts] = useState([]);
+type ResortsProps = {
+	resortsCards: ResortsCardType[];
+};
 
-	useEffect(() => {
-		setResorts(props.data);
-	});
-
+const Resorts = ({ resortsCards }: ResortsProps) => {
 	return (
 		<>
 			<h2 className={styles.title}>Тропические курорты</h2>
 			<div className={styles.resorts}>
-				{resorts.map((resort) => (
-					<ResortsCard key={resort.id} item={resort} img={bagams} />
-				))}
+				<ResortsCard key={resortsCards[0].id} resort={resortsCards[0]} img={bagams} />
+				<ResortsCard key={resortsCards[1].id} resort={resortsCards[1]} img={maldives} />
+				<ResortsCard key={resortsCards[2].id} resort={resortsCards[2]} img={thailand} />
 			</div>
 		</>
 	);

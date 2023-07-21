@@ -10,8 +10,8 @@ const Nav = () => {
 					<NavLink to='/' className={styles.nav__link}>
 						Главная
 					</NavLink>
-					<NavLink to='/#about-us' className={styles.nav__link}>
-						О нас
+					<NavLink to='/tours' className={styles.nav__link}>
+						Все туры
 					</NavLink>
 					<NavLink to='/guide' className={styles.nav__link}>
 						Путеводитель

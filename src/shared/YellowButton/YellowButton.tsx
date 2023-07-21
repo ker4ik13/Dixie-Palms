@@ -1,32 +1,43 @@
-import styles from './YellowButton.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './YellowButton.module.scss';
 
-const YellowButton = (props) => {
+type YellowButtonProps = {
+	text: string;
+	to: string;
+	size?: string;
+	round?: string;
+};
+
+const YellowButton = ({ text, to, size, round }: YellowButtonProps) => {
+	const isBig = size === 'big' ? true : false;
+	const isMedium = size === 'medium' ? true : false;
+	const isRound = round === 'round' ? true : false;
+
 	return (
 		<>
-			{!props.size && (
-				<Link to={props.to} className={styles.button}>
-					{props.text}
+			{!size && (
+				<Link to={to} className={styles.button}>
+					{text}
 				</Link>
 			)}
-			{props.size === 'medium' && !props.round && (
-				<Link to={props.to} className={`${styles.button} ${styles.medium}`}>
-					{props.text}
+			{isMedium && !isRound && (
+				<Link to={to} className={`${styles.button} ${styles.medium}`}>
+					{text}
 				</Link>
 			)}
-			{props.size === 'big' && !props.round && (
-				<Link to={props.to} className={`${styles.button} ${styles.big}`}>
-					{props.text}
+			{isBig && !isRound && (
+				<Link to={to} className={`${styles.button} ${styles.big}`}>
+					{text}
 				</Link>
 			)}
-			{props.size === 'medium' && props.round === 'round' && (
-				<Link to={props.to} className={`${styles.button} ${styles.medium} ${styles.round}`}>
-					{props.text}
+			{isMedium && isRound && (
+				<Link to={to} className={`${styles.button} ${styles.medium} ${styles.round}`}>
+					{text}
 				</Link>
 			)}
-			{props.size === 'big' && props.round === 'round' && (
-				<Link to={props.to} className={`${styles.button} ${styles.big} ${styles.round}`}>
-					{props.text}
+			{isBig && isRound && (
+				<Link to={to} className={`${styles.button} ${styles.big} ${styles.round}`}>
+					{text}
 				</Link>
 			)}
 		</>

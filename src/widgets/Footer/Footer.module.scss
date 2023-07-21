@@ -1,4 +1,4 @@
-@use '../../../../app/styles/variables.scss';
+@import '@/app/styles/vars';
 
 .container{
 	max-width: 1360px;
@@ -33,18 +33,18 @@
 	}
 }
 .name{
-	@include variables.T14();
+	@include T14();
 	color: #fff;
 }
 .copyright{
-	@include variables.T5();
+	@include T5();
 	color: #fff;
 }
 .link{
 	color: #fff;
 	transition: opacity .2s linear;
 	&:hover{
-			opacity: .6;
+		opacity: .6;
 	}
 }
 @media(max-width: 540px){

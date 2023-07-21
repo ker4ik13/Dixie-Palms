@@ -1,5 +1,5 @@
-import styles from './SecondBlock.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './SecondBlock.module.scss';
 import island from './img/island.png';
 
 const SecondBlock = () => {

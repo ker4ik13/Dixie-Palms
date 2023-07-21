@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import styles from './ThirdBlock.module.scss';
 import tour1 from './img/tour1.jpg';
 import tour2 from './img/tour2.jpg';
-import YellowButton from '@/shared/ui/seeButton/YellowButton';
+import YellowButton from '@/shared/YellowButton/YellowButton';
 
 const ThirdBlock = () => {
 	return (

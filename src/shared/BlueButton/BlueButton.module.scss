@@ -1,0 +1,15 @@
+@import '@/app/styles/vars';
+
+.buttonWrapper {
+	position: relative;
+	z-index: 2;
+}
+
+.button {
+	cursor: pointer;
+	border-radius: 30px;
+	background-color: $blue;
+	padding: 10px 50px;
+	color: $white;
+	@include T3();
+}

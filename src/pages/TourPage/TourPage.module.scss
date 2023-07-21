@@ -1,0 +1,17 @@
+@import '@/app/styles/vars';
+
+.tourPage {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.tour_description {
+	@include T14();
+	color: $main-color;
+	margin: 50px auto;
+	cursor: text;
+}

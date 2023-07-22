@@ -1,9 +1,9 @@
-import styles from './Guide.module.scss';
+import styles from './GuidePage.module.scss';
 import Resorts from './ui/Resorts/Resorts';
 import Sale from './ui/Sale/Sale';
 import Tours from '../../shared/Tours/Tours';
 
-import resortsData from '@/serverData/resorts.json';
+import resortsData from '@/mockData/resorts.json';
 import { useEffect } from 'react';
 
 const GuidePage = () => {

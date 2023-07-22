@@ -1,0 +1,127 @@
+@import '@/app/styles/vars';
+
+.TouristsNotes {
+	min-height: 450px;
+	background-color: $beige;
+	max-width: 1000px;
+	width: 100%;
+	padding: 30px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.title {
+	@include T4();
+	color: $blue;
+	text-align: center;
+}
+.notes {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+	gap: 20px;
+}
+.noteList {
+	margin-top: 30px;
+	max-width: 460px;
+	@include T5();
+	color: $blue;
+
+	&:first-child {
+		text-align: left;
+
+		.note {
+			margin-left: 14px;
+			margin-top: 6px;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 6px;
+				left: -10px;
+				height: 4px;
+				width: 4px;
+				background-color: $blue;
+				border-radius: 50%;
+			}
+		}
+	}
+	&:last-child {
+	text-align: right;
+
+		.note {
+			margin-right: 14px;
+			margin-top: 6px;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 6px;
+				right: -10px;
+				height: 4px;
+				width: 4px;
+				background-color: $blue;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.bluePalm {
+	position: absolute;
+	bottom: -160%;
+	left: -15%;
+}
+.yellowPalm {
+	position: absolute;
+	bottom: -80%;
+	right: -10%;
+}
+
+@media (max-width: 900px) {
+	.title {
+		@include T1();
+	}
+	.notes {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+	}
+	.noteList:last-child{
+		text-align: left;
+
+		.note {
+			margin-right: 0;
+			margin-left: 14px;
+		}
+
+		& .note:before {
+			right: auto;
+			left: -10px;
+		}
+	}
+	.bluePalm {
+		bottom: auto;
+		top: -50%;
+		left: auto;
+		right: -500px;
+		transform: rotate(270deg);
+	}
+	.yellowPalm {
+		display: none;
+	}
+}
+
+@media (max-width: 750px) {
+	.bluePalm {
+		display: none;
+	}
+	.notes {
+		align-items: center;
+		gap: 20px;
+	}
+}

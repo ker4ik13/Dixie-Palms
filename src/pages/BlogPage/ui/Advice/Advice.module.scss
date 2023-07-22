@@ -1,0 +1,72 @@
+@import '@/app/styles/vars';
+
+.advice {
+	margin-top: 30px;
+	width: 100%;
+}
+.title {
+	background-color: $main-color;
+	@include T4();
+	padding: 10px 30px;
+	display: inline-block;
+	color: $blue;
+}
+.wrapper {
+	background-color: $beige;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 20px 30px;
+}
+.adviceList {
+	text-align: left;
+	max-width: 400px;
+
+	&:last-child {
+			text-align: right;
+			max-width: 340px;
+		}
+}
+.adviceText {
+	margin-bottom: 30px;
+	color: $blue;
+	@include T5();
+
+	&::last-child {
+		margin-bottom: 0;
+	}
+}
+.earth {
+	max-width: 280px;
+}
+
+@media (max-width: 1000px) {
+	.earth {
+		max-width: 220px;
+	}
+}
+@media (max-width: 900px) {
+	.title {
+		@include T1();
+	}
+	.wrapper {
+		flex-direction: column;
+		gap: 0;
+	}
+	.adviceList {
+		max-width: none;
+		order: 1;
+
+		&:last-child {
+			max-width: none;
+			text-align: left;
+			order: 2;
+		}
+	}
+	.earth {
+		order: 3;
+		width: 100%;
+	}
+}

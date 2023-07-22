@@ -8,6 +8,11 @@ import seychelles1 from './img/seychelles1.jpg';
 import seychelles2 from './img/seychelles2.jpg';
 import car1 from './img/car1.jpg';
 import MediumArticle from './ui/MediumArticle/MediumArticle';
+import TouristsNotes from './ui/TouristsNotes/TouristsNotes';
+import Advice from './ui/Advice/Advice';
+import Tour from '@/shared/Tour/Tour';
+
+import hotelsData from '@/mockData/hotels.json';
 
 const BlogPage = () => {
 	useEffect(() => {
@@ -37,6 +42,16 @@ const BlogPage = () => {
 						img={car1}
 						buttonLink='#'
 					/>
+				</div>
+				<div className={styles.notes}>
+					<TouristsNotes />
+				</div>
+				<Advice />
+				<h2 className={styles.title}>Обзор отелей</h2>
+				<div className={styles.hotels}>
+					<Tour tour={hotelsData[0]} />
+					<Tour tour={hotelsData[1]} />
+					<Tour tour={hotelsData[2]} />
 				</div>
 			</div>
 		</div>

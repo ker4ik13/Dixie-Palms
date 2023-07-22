@@ -11,13 +11,38 @@
 	margin-top: 30px;
 	gap: 30px;
 }
-
+.notes {
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+.title {
+	@include T14();
+	color: $main-color;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.hotels {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+	align-items: center;
+}
 
 @media (max-width: 950px) {
 	.article {
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
+	}
+	.title {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		@include T2();
 	}
 }
 

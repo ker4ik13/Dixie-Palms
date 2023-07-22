@@ -1,0 +1,20 @@
+[
+	{
+		"id": "1",
+		"title": "Sunsol Isla Caribe",
+		"src": "https://tez-travel.com/workdir/hotels/piscinas1_9444.jpg",
+		"description": "Сансоль Исланд Карибе - это курортный комплекс. Курорт предлагает множество активностей, таких как дайвинг, сноркелинг, гольф, теннис и т.д. Он также известен..."
+	},
+	{
+		"id": "2",
+		"title": "Kanvaz Village Resort Seminyak",
+		"src": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/47/d7/4c/front-entrance.jpg?w=700&h=-1&s=1",
+		"description": "Курортный отель Kanvaz Village Seminyak расположен на курорте Семиньяк, в 700 метрах от пляжа Бату-Белиг. К услугам гостей открытый бассейн, бесплатная частная парковка, фитнес-центр и..."
+	},
+	{
+		"id": "3",
+		"title": "Le Louvre Hotel & Spa",
+		"src": "https://media.hrs.com/media/image/af/68/2d/Louvre_Hotel_SPA-Antananarivo-Hotel_outdoor_area-1-615409.jpg",
+		"description": "Спа-отель Le Louvre с крытым бассейном, спа- и велнес-центром расположен в городе Антананариву. Предоставляется бесплатный WiFi."
+	}
+]

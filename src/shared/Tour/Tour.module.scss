@@ -83,4 +83,13 @@
 			height: 240px;
 		}
 	}
+	.text {
+		@include T21();
+	}
+	.title {
+		@include T3();
+	}
+	.description {
+		height: 100%;
+	}
 }

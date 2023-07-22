@@ -11,7 +11,7 @@ const Tour = ({ tour }: TourProps) => {
 		<div className={styles.tour}>
 			<div className={styles.img}>
 				<img src={tour.src} alt={tour.title} />
-				<p className={styles.price}>{tour.price}</p>
+				{tour.price && <p className={styles.price}>{tour.price}</p>}
 			</div>
 			<p className={styles.title}>{tour.title}</p>
 			<div className={styles.description}>

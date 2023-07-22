@@ -14,4 +14,11 @@
 	color: $main-color;
 	margin: 50px auto;
 	cursor: text;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.tourPage {
+		margin-bottom: 50px;
+	}
 }

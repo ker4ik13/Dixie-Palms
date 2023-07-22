@@ -4,10 +4,10 @@ import './styles/styles';
 import Main from '../pages/MainPage/Main';
 import Layout from '../shared/Layout/Layout';
 import Preloader from '@/widgets/Preloader/Preloader';
-import ToursPage from '@/pages/ToursPage/ToursPage';
-import TourPage from '@/pages/TourPage/TourPage';
-const GuidePage = lazy(() => import('../pages/GuidePage/Guide'));
-const BlogPage = lazy(() => import('../pages/BlogPage/Blog'));
+const ToursPage = lazy(() => import('@/pages/ToursPage/ToursPage'));
+const TourPage = lazy(() => import('@/pages/TourPage/TourPage'));
+const GuidePage = lazy(() => import('@/pages/GuidePage/Guide'));
+const BlogPage = lazy(() => import('@/pages/BlogPage/Blog'));
 
 const App = () => {
 	return (

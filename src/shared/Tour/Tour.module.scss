@@ -6,6 +6,8 @@
 	align-items: center;
 	flex-direction: column;
 	max-width: 420px;
+	width: 100%;
+	min-width: 300px;
 	gap: 30px;
 }
 .img{
@@ -69,4 +71,16 @@
 	line-clamp: 6;
 	box-orient: vertical;
 	cursor: text;
+}
+
+@media (max-width: 900px) {
+	.tour {
+		gap: 14px;
+	}
+	.img {
+		height: 240px;
+		& img {
+			height: 240px;
+		}
+	}
 }

@@ -25,7 +25,7 @@
 	width: 100%;
 	max-height: 360px;
 	-o-object-fit: cover;
-	   object-fit: cover;
+	object-fit: cover;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -33,7 +33,7 @@
 }
 .img{
 	-o-object-fit: cover;
-	   object-fit: cover;
+	object-fit: cover;
 }
 .card_price{
 	font-size: 16px;
@@ -103,4 +103,35 @@
 	padding: 6px 10px;
 	display: flex;
 	margin-bottom: -2px;
+}
+
+@media (max-width: 1370px) {
+	.card {
+		&:first-child {
+			.img_wrapper {
+				margin-right: 0;
+			}
+		}
+
+		&:nth-child(2n) {
+			.img_wrapper {
+				margin: 0;
+			}
+		}
+
+		&:last-child {
+			.img_wrapper {
+				margin-left: 0;
+			}
+		}
+	}
+	.img_wrapper {
+		max-height: 260px;
+	}
+}
+
+@media (max-width: 450px) {
+	.card {
+		width: 100%;
+	}
 }

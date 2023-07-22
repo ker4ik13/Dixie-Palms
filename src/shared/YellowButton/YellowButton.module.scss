@@ -19,3 +19,21 @@
 		border-radius: 50px;
 	}
 }
+
+@media (max-width: 700px) {
+	.button {
+		&.big {
+				padding: 10px 26px;
+				@include T5();
+		}
+		&.medium {
+			@include T5();
+			padding: 10px;
+		}
+		&.round {
+			@include T5();
+			padding: 10px 26px;
+			border-radius: 50px;
+		}
+	}
+}

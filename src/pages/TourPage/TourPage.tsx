@@ -17,6 +17,7 @@ const TourPage = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		const asyncGetTours = async () => {
 			const response = await getTours(
 				`https://64aff776c60b8f941af4f841.mockapi.io/server/tours/${tourId[4]}`,
@@ -32,7 +33,7 @@ const TourPage = () => {
 		<div className={styles.tourPage}>
 			{loading && <Preloader />}
 			{!loading && (
-				<>
+				<div className='container'>
 					<TourHeader
 						img={tour.src}
 						title={tour.title2}
@@ -40,7 +41,7 @@ const TourPage = () => {
 					/>
 					<p className={styles.tour_description}>Описание тура</p>
 					<TourDescription tour={tour} />
-				</>
+				</div>
 			)}
 		</div>
 	);

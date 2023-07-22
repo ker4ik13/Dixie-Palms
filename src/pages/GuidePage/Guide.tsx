@@ -4,8 +4,12 @@ import Sale from './ui/Sale/Sale';
 import Tours from '../../shared/Tours/Tours';
 
 import resortsData from '@/serverData/resorts.json';
+import { useEffect } from 'react';
 
 const GuidePage = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<main className={styles.main}>
 			<div className='container'>

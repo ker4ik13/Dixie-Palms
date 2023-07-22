@@ -13,3 +13,10 @@
 	color: $white;
 	@include T3();
 }
+
+@media (max-width: 768px) {
+	.button {
+		@include T5();
+		padding: 10px 30px;
+	}
+}

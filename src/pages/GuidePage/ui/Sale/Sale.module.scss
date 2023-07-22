@@ -15,7 +15,8 @@
     max-width: 420px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+		object-fit: cover;
 }
 .text{
     padding: 20px;
@@ -51,4 +52,32 @@
     width: 33.333%;
     line-height: 1.1;
     font-size: 16px;
+}
+@media (max-width: 1300px) {
+	.sale {
+		margin: 0 auto 50px;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		height: auto;
+		margin: 0 auto;
+	}
+	.img {
+		max-width: none;
+		max-height: 400px;
+	}
+	.about {
+		position: static;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.about_text {
+		width: 100%;
+	}
 }

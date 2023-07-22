@@ -48,7 +48,7 @@
 	height: 16px;
 	position: relative;
 	opacity: .7;
-	z-index: 6;
+	z-index: 12;
 	transition: opacity .2s linear;
 	-webkit-filter: drop-shadow(0 0 30px #000);
 	filter: drop-shadow(0 0 30px #000);
@@ -114,10 +114,10 @@
 		content: "";
 		width: 100vw;
 		height: 100vh;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 4;
+		z-index: 0;
 		background-color: #000;
 		opacity: 0;
 		transition: opacity .2s linear;
@@ -126,6 +126,7 @@
 		overflow: hidden;
 		&:before{
 			opacity: .5;
+			z-index: 4;
 		}
 	}
 	}

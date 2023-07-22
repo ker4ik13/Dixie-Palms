@@ -38,6 +38,8 @@ const TourPage = () => {
 						img={tour.src}
 						title={tour.title2}
 						description={tour.description2}
+						buttonText='Забронировать'
+						buttonLink='./buy'
 					/>
 					<p className={styles.tour_description}>Описание тура</p>
 					<TourDescription tour={tour} />

@@ -7,7 +7,7 @@ import Preloader from '@/widgets/Preloader/Preloader';
 const ToursPage = lazy(() => import('@/pages/ToursPage/ToursPage'));
 const TourPage = lazy(() => import('@/pages/TourPage/TourPage'));
 const GuidePage = lazy(() => import('@/pages/GuidePage/Guide'));
-const BlogPage = lazy(() => import('@/pages/BlogPage/Blog'));
+const BlogPage = lazy(() => import('@/pages/BlogPage/BlogPage'));
 
 const App = () => {
 	return (

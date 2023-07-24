@@ -16,7 +16,7 @@ const Nav = () => {
 					<NavLink to='/guide' className={styles.nav__link}>
 						Путеводитель
 					</NavLink>
-					<NavLink href='#' className={styles.nav__link}>
+					<NavLink to='/book-trip' className={styles.nav__link}>
 						Онлайн - бронирование
 					</NavLink>
 					<NavLink href='#' className={styles.nav__link}>

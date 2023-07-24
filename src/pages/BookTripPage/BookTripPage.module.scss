@@ -1,0 +1,20 @@
+@import '@/app/styles/vars';
+
+.bookTrip {
+	position: relative;
+	z-index: 1;
+}
+.title {
+	@include T14();
+	color: $main-color;
+	text-align: center;
+	cursor: text;
+	margin-top: 50px;
+}
+
+
+@media (max-width: 900px) {
+	.title {
+		@include T2();
+	}
+}

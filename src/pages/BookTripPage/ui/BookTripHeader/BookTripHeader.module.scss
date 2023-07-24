@@ -1,0 +1,95 @@
+@import '@/app/styles/vars';
+
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: $beige;
+	height: 360px;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.img {
+	max-width: 600px;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	height: 100%;
+
+	background-color: $blue;
+}
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	height: 100%;
+	padding: 30px 20px;
+	gap: 20px;
+}
+.content {
+	max-width: 500px;
+	width: 100%;
+	@include T3();
+	color: $blue;
+}
+.title {
+	@include T2();
+	cursor: text;
+}
+.textWrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.text {
+	@include T3();
+	margin-top: 10px;
+	cursor: text;
+}
+.icon {
+	margin-top: 8px;
+	width: 20px;
+	height: 20px;
+}
+.yellowPalm {
+	position: absolute;
+	bottom: -46%;
+	right: -15%;
+	transform: rotate(-20deg);
+}
+
+@media (max-width: 1150px) {
+	.img {
+		max-width: 500px;
+	}
+}
+@media (max-width: 1070px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+	}
+	.img {
+		max-height: 300px;
+		max-width: none;
+	}
+}
+@media (max-width: 700px) {
+	.img {
+		max-height: 200px;
+	}
+	.yellowPalm {
+		display: none;
+	}
+	.title {
+		@include T1();
+	}
+	.text {
+		@include T5();
+	}
+}

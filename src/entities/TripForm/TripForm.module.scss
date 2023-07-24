@@ -1,0 +1,270 @@
+@import '@/app/styles/vars';
+
+.form {
+	margin-top: 50px;
+	width: 100%;
+	margin-bottom: 100px;
+}
+.departure {
+
+}
+.rowWrapper {
+	display: flex;
+	align-items: center;
+}
+.departure {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.checkboxWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.radio {
+	-webkit-appearance: auto;
+	-moz-appearance: auto;
+	appearance: none;
+	aspect-ratio: 1;
+	background: none;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	border-color: #fff;
+	color: #fff;
+	transition: .1s;
+	font-size: inherit;
+	cursor: pointer;
+	position: relative;
+
+	&:before {
+		content: '';
+		height: 12px;
+		width: 12px;
+		border-radius: 50%;
+		background-color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: none;
+	}
+	&:checked::before{
+		display: block;
+	}
+}
+.dateWrapper {
+	display: flex;
+	gap: 30px;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+.checkboxLabel {
+	margin-left: 12px;
+	cursor: pointer;
+	display: inline-block;
+	color: #fff;
+	@include T5();
+}
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	width: 100%;
+}
+.labelForInput {
+	color: #fff;
+	margin-bottom: 10px;
+	@include T5();
+	cursor: text;
+}
+select {
+	max-width: 340px;
+	position: relative;
+	max-height: 500px;
+	padding: 17px 30px;
+	background-color: $beige;
+	border-radius: 0;
+	@include T3();
+	cursor: pointer;
+	height: 60px;
+	background-image: url('@/icons/airplane-icon.svg');
+	background-repeat: no-repeat;
+	background-position: right 30px top 50%, 0 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	&::after {
+		display: none;
+	}
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+.input {
+	width: 100%;
+	background-color: $beige;
+	padding: 17px 30px;
+	cursor: text;
+	@include T3();
+	&::-webkit-input-placeholder {
+		opacity: .6;
+	}
+	&::-moz-placeholder {
+		opacity: .6;
+	}
+	&:-ms-input-placeholder {
+		opacity: .6;
+	}
+	&::-ms-input-placeholder {
+		opacity: .6;
+	}
+	&::placeholder {
+		opacity: .6;
+	}
+}
+.passengers {
+	margin-top: 50px;
+}
+.subtitle {
+	@include T15();
+	color: #fff;
+}
+.passengersWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 30px;
+	margin-top: 30px;
+}
+.buttonWrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 30px;
+}
+.addIcon {
+	margin-right: 20px;
+}
+.addButton {
+	color: $beige;
+	@include T3();
+	background: transparent;
+}
+.notesWrapper {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 850px;
+	width: 100%;
+}
+.textarea {
+	max-width: 850px;
+	width: 100%;
+	min-height: 200px;
+	background-color: $beige;
+	padding: 16px 30px;
+	@include T3();
+	resize: none;
+
+	&::-webkit-input-placeholder {
+		opacity: .6;
+	}
+
+	&::-moz-placeholder {
+		opacity: .6;
+	}
+
+	&:-ms-input-placeholder {
+		opacity: .6;
+	}
+
+	&::-ms-input-placeholder {
+		opacity: .6;
+	}
+
+	&::placeholder {
+		opacity: .6;
+	}
+}
+.linkWrapper {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+}
+.link {
+	color: #fff;
+	@include T16();
+	transition: opacity .2s linear;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+.linkIcon {
+	margin-left: 12px;
+}
+.checkbox {
+	width: 20px;
+	height: 20px;
+	border: 2px solid $beige;
+	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position: relative;
+	cursor: pointer;
+
+	&:checked::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $beige;
+		width: 12px;
+		height: 12px;
+	}
+}
+.lastCheckboxWrapper {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+.yellowButton {
+	background-color: $main-color;
+	padding: 10px;
+	color: $blue;
+	@include T3();
+	cursor: pointer;
+	margin-top: 50px;
+	&:disabled {
+		opacity: .7;
+		cursor: not-allowed;
+	}
+}
+.error {
+	color: red;
+	@include T5();
+	margin-top: 10px;
+}
+@media (max-width: 500px) {
+	select {
+		@include T5();
+	}
+	.input {
+		@include T5();
+	}
+	.textarea {
+		@include T5();
+	}
+}

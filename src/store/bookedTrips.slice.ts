@@ -1,16 +1,17 @@
+import TourType from '@/types/TourType';
 import { createSlice } from '@reduxjs/toolkit';
 
-const bookedTrips:[] = [];
+const bookedTrip:TourType[] = [];
 
 
 const bookedTripsSlice = createSlice({
-	name: 'bookedTrips',
-	initialState: bookedTrips,
+	name: 'bookedTrip',
+	initialState: {
+		bookedTrip,
+	},
 	reducers: {
 		addBookTrip(state, action) {
-			console.log(state);
-			console.log(action);
-			state.bookedTrips.push(action.payload);
+			state.bookedTrip[0] = action.payload;
 		},
 	},
 });

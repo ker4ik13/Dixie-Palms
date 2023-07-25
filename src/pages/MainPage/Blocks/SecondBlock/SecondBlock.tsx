@@ -30,7 +30,7 @@ const SecondBlock = () => {
 						Бали с бесплатным трансфером из аэропорта и проживанием в отелях высокого
 						уровня!
 					</p>
-					<Link to='/guide' className={styles.second_block__sale__button}>
+					<Link to='/tours' className={styles.second_block__sale__button}>
 						Забронировать поезку
 					</Link>
 				</div>

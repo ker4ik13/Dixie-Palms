@@ -1,4 +1,3 @@
-import Tour from '@/shared/Tour/Tour';
 import styles from './TourPage.module.scss';
 import { getTours } from '@/shared/api/getData';
 import React, { useEffect, useState } from 'react';
@@ -44,7 +43,8 @@ const TourPage = () => {
 						title={tour.title2}
 						description={tour.description2}
 						buttonText='Забронировать'
-						buttonLink='./buy'
+						buttonLink='/book-trip'
+						tour={tour}
 					/>
 					<p className={styles.tour_description}>Описание тура</p>
 					<TourDescription tour={tour} />

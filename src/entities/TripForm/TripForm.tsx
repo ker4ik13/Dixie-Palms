@@ -541,12 +541,12 @@ const TripForm = () => {
 								type='date'
 								id='birthdayDate'
 								className={styles.input}
-								{...register('birtdayDate', {
+								{...register('birthdayDate', {
 									required: 'Введите дату рождения',
 								})}
 							/>
-							{errors.birtdayDate && (
-								<p className={styles.error}>{errors?.birtdayDate.message}</p>
+							{errors.birthdayDate && (
+								<p className={styles.error}>{errors?.birthdayDate.message}</p>
 							)}
 						</div>
 						<div className={styles.inputWrapper}>
@@ -606,10 +606,10 @@ const TripForm = () => {
 							Примечание (не обязательно)
 						</label>
 						<textarea
-							name='notes'
 							id='notes'
 							className={styles.textarea}
 							placeholder='Оставьте примечание здесь'
+							{...register('notes')}
 						></textarea>
 					</div>
 				</div>

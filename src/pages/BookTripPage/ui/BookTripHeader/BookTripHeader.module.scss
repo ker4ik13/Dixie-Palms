@@ -51,6 +51,20 @@
 	margin-top: 10px;
 	cursor: text;
 }
+.tourLink {
+	color: $blue;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	& .text {
+		cursor: pointer;
+	}
+	& .icon {
+		cursor: pointer;
+	}
+}
 .icon {
 	margin-top: 8px;
 	width: 20px;

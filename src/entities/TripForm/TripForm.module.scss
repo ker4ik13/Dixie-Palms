@@ -21,6 +21,11 @@
 	flex-wrap: wrap;
 	gap: 20px;
 }
+.success {
+	color: green;
+	@include T3();
+	margin-top: 10px;
+}
 .radio {
 	-webkit-appearance: auto;
 	-moz-appearance: auto;

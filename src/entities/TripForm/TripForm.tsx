@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 const TripForm = () => {
 	const {
 		register,
-		formState: { errors },
+		formState: { errors, isSubmitSuccessful },
 		handleSubmit,
 		reset,
 		watch,
@@ -634,6 +634,7 @@ const TripForm = () => {
 				<button type='submit' className={styles.yellowButton}>
 					Отправить
 				</button>
+				<p className={styles.success}>{isSubmitSuccessful ? 'Успешно' : ''}</p>
 			</form>
 		</div>
 	);

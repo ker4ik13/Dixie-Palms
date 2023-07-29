@@ -1,13 +1,13 @@
-@import "@/app/styles/vars";
+@import '@/app/styles/vars';
 
-.tours{
+.tours {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	gap: 50px;
 	margin-bottom: 100px;
 }
-.wrapper{
+.wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -15,9 +15,9 @@
 	margin-bottom: 50px;
 	gap: 20px;
 	row-gap: 50px;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 }
-.title{
+.title {
 	@include T14();
 	color: $main-color;
 	text-align: center;

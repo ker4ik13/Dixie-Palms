@@ -6,7 +6,7 @@ import { addBookTrip } from '@/store/bookedTrips.slice';
 import TourType from '@/types/TourType';
 
 type TourHeaderProps = {
-	tour: TourType;
+	tour?: TourType;
 	img: string;
 	title: string;
 	description: string;

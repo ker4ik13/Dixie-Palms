@@ -5,18 +5,7 @@ import { useSelector } from 'react-redux';
 import YellowButton from '@/shared/YellowButton/YellowButton';
 
 const BookTripPage = () => {
-	const bookedTrip = useSelector((state) => state.bookTrip.bookedTrip);
-
-	if (!bookedTrip[0]) {
-		return (
-			<div className={styles.bookTrip}>
-				<div className={styles.wrapper}>
-					<h2 className={styles.title}>Выберите тур</h2>
-					<YellowButton text='Все туры' to='/tours' size='big' />
-				</div>
-			</div>
-		);
-	}
+	const bookedTrip = useSelector((state: any) => state.bookTrip.bookedTrip);
 
 	if (bookedTrip[0]) {
 		return (
@@ -28,6 +17,14 @@ const BookTripPage = () => {
 			</div>
 		);
 	}
+	return (
+		<div className={styles.bookTrip}>
+			<div className={styles.wrapper}>
+				<h2 className={styles.title}>Выберите тур</h2>
+				<YellowButton text='Все туры' to='/tours' size='big' />
+			</div>
+		</div>
+	);
 };
 
 export default BookTripPage;

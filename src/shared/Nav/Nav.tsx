@@ -19,13 +19,13 @@ const Nav = () => {
 					<NavLink to='/book-trip' className={styles.nav__link}>
 						Онлайн - бронирование
 					</NavLink>
-					<NavLink href='#' className={styles.nav__link}>
+					<NavLink to='#' className={styles.nav__link}>
 						Акции
 					</NavLink>
 					<NavLink to='/blog' className={styles.nav__link}>
 						Блог
 					</NavLink>
-					<NavLink href='#' className={styles.nav__link}>
+					<NavLink to='#' className={styles.nav__link}>
 						Контакты
 					</NavLink>
 				</nav>

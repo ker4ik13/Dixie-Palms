@@ -1,0 +1,2 @@
+import{r as o,j as s}from"./index-35ce947b.js";import{T as r}from"./Tours-5bcbb276.js";import"./Tour-e6304169.js";import"./YellowButton-8fbb123a.js";import"./getData-da51234f.js";const t="_toursPage_1ukca_1",a={toursPage:t},l=()=>(o.useEffect(()=>{window.scrollTo(0,0)},[]),s.jsx("div",{className:"container",children:s.jsx("div",{className:a.toursPage,children:s.jsx(r,{count:"all"})})}));export{l as default};
+//# sourceMappingURL=ToursPage-d2fdd3b7.js.map

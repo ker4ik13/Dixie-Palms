@@ -1,32 +1,33 @@
-export const callNav = (event, styles) => {
-    const nav = event.currentTarget;
-    nav.classList.toggle(styles.active);
-    nav.previousSibling.classList.toggle(styles.list);
-    document.body.classList.toggle(styles.overflow);
+function removeClasses(nav: any, styles: any) {
+	nav.classList.remove(styles.active);
+	nav.previousSibling.classList.remove(styles.list);
+	document.body.classList.remove(styles.overflow);
+}
 
-    const navWrapper = document.querySelector('nav').parentElement;
+export function callNav(event: any, styles: any) {
+	const nav = event.currentTarget;
 
-    const navLinks = document.querySelectorAll('nav a');
+	nav.classList.toggle(styles.active);
+	nav.previousSibling.classList.toggle(styles.list);
+	document.body.classList.toggle(styles.overflow);
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            removeClasses(nav, styles);
-        });
-    });
+	const navWrapper = nav.parentElement;
 
-    document.addEventListener('click', (event) => {
-        const withinBoundaries = event.composedPath().includes(navWrapper);
+	const navLinks = document.querySelectorAll('nav a');
 
-        if (!withinBoundaries) {
-            removeClasses(nav, styles);
-        }
-    });
-};
+	navLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			removeClasses(nav, styles);
+		});
+	});
 
-function removeClasses(nav, styles){
-    nav.classList.remove(styles.active);
-    nav.previousSibling.classList.remove(styles.list);
-    document.body.classList.remove(styles.overflow);
+	document.addEventListener('click', (event) => {
+		const withinBoundaries = event.composedPath().includes(navWrapper);
+
+		if (!withinBoundaries) {
+			removeClasses(nav, styles);
+		}
+	});
 }
 
 export default callNav;

@@ -1,5 +1,5 @@
-.page{
-	background-color: #0B4865;
+.page {
+	background-color: #0b4865;
 	width: 100%;
 	height: 100%;
 	padding-top: 70px;
@@ -10,7 +10,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
-.page_cloud{
+.page_cloud {
 	position: absolute;
 	top: -30px;
 	left: 0;
@@ -18,7 +18,7 @@
 	width: 100%;
 }
 @media (max-width: 768px) {
-	.page{
+	.page {
 		padding-top: 40px;
 	}
 }

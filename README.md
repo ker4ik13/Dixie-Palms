@@ -8,7 +8,7 @@
 ![SCSS](https://img.shields.io/badge/SCSS-purple)
 ![eslint](https://camo.githubusercontent.com/31b6dc0e4a4fd6f9735a9db885b951a3b7f6a08755d814856adc6d08b33429d6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f65736c696e742d382e33382e302d707572706c652e737667)
 ![prettier](https://camo.githubusercontent.com/00727f51dcdcf120061f071c93fea4b7f3f145d27dd0eec503550fcf8c38adef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7072657474696572742d332e302e302d707572706c652e737667)
-![jest](https://img.shields.io/badge/JEST-orange)
+<!-- ![jest](https://img.shields.io/badge/JEST-orange) -->
 
 
 

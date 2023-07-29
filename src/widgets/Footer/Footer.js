@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import styles from './footer.module.scss';
+import { Link } from 'react-router-dom';
+const Footer = () => {
+    return (_jsx("footer", { className: styles.footer, children: _jsxs("div", { className: styles.container, children: [_jsxs("div", { className: styles.column, children: [_jsx("p", { className: styles.name, children: "Dixie Palms" }), _jsx("p", { className: styles.copyright, children: "\u00A9 Dixie Palms 2023, All rights reserved" })] }), _jsxs("div", { className: styles.column, children: [_jsx(Link, { to: '/', className: styles.link, children: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F" }), _jsx(Link, { to: '/tours', className: styles.link, children: "\u0412\u0441\u0435 \u0442\u0443\u0440\u044B" }), _jsx(Link, { to: '/guide', className: styles.link, children: "\u041F\u0443\u0442\u0435\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C" }), _jsx(Link, { to: '/book-trip', className: styles.link, children: "\u041E\u043D\u043B\u0430\u0439\u043D - \u0431\u0440\u043E\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435" }), _jsx(Link, { to: '#', className: styles.link, children: "\u0410\u043A\u0446\u0438\u0438" }), _jsx(Link, { to: '/blog', className: styles.link, children: "\u0411\u043B\u043E\u0433" }), _jsx(Link, { to: '#', className: styles.link, children: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B" })] })] }) }));
+};
+export default Footer;

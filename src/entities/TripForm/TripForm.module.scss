@@ -5,9 +5,6 @@
 	width: 100%;
 	margin-bottom: 100px;
 }
-.departure {
-
-}
 .rowWrapper {
 	display: flex;
 	align-items: center;
@@ -35,7 +32,7 @@
 	border: 2px solid #fff;
 	border-color: #fff;
 	color: #fff;
-	transition: .1s;
+	transition: 0.1s;
 	font-size: inherit;
 	cursor: pointer;
 	position: relative;
@@ -52,7 +49,7 @@
 		transform: translate(-50%, -50%);
 		display: none;
 	}
-	&:checked::before{
+	&:checked::before {
 		display: block;
 	}
 }
@@ -93,7 +90,9 @@ select {
 	height: 60px;
 	background-image: url('@/icons/airplane-icon.svg');
 	background-repeat: no-repeat;
-	background-position: right 30px top 50%, 0 0;
+	background-position:
+		right 30px top 50%,
+		0 0;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -112,19 +111,19 @@ select {
 	cursor: text;
 	@include T3();
 	&::-webkit-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 	&::-moz-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 	&:-ms-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 	&::-ms-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 	&::placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 }
 .passengers {
@@ -176,23 +175,23 @@ select {
 	resize: none;
 
 	&::-webkit-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 
 	&::-moz-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 
 	&:-ms-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 
 	&::-ms-input-placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 
 	&::placeholder {
-		opacity: .6;
+		opacity: 0.6;
 	}
 }
 .linkWrapper {
@@ -203,10 +202,10 @@ select {
 .link {
 	color: #fff;
 	@include T16();
-	transition: opacity .2s linear;
+	transition: opacity 0.2s linear;
 
 	&:hover {
-		opacity: .7;
+		opacity: 0.7;
 	}
 }
 .linkIcon {
@@ -248,7 +247,7 @@ select {
 	cursor: pointer;
 	margin-top: 50px;
 	&:disabled {
-		opacity: .7;
+		opacity: 0.7;
 		cursor: not-allowed;
 	}
 }

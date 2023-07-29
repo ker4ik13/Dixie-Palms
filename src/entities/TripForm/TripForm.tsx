@@ -1,9 +1,8 @@
 import styles from './TripForm.module.scss';
-import airplaneIcon from '@/icons/airplane-icon.svg';
 import addIcon from '@/icons/plus-icon.svg';
 import { Link } from 'react-router-dom';
 import linkIcon from '@/icons/link-icon.svg';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 const TripForm = () => {
 	const {
@@ -19,14 +18,6 @@ const TripForm = () => {
 	});
 
 	const handleDate = () => {
-		// if (getValues('typeOfFly') === 'twoWay' && getValues('dateBack') === '') {
-		// 	setError('dateBack', {
-		// 		type: 'dateBackUndefined',
-		// 		message: 'Введите дату возвращения',
-		// 	});
-		// 	return false;
-		// }
-
 		const dateThere = getValues('dateThere').split('-');
 		const dateBack = getValues('dateBack').split('-');
 		const dateThereInSeconds = new Date(dateThere[0], dateThere[1], dateThere[2]).getTime();
@@ -42,13 +33,12 @@ const TripForm = () => {
 		return true;
 	};
 
-	const onSubmit = (data: object) => {
+	const onSubmit = () => {
 		const isDateWithoutError = handleDate();
 
 		if (isDateWithoutError) {
-			console.log(data);
-
-			// alert(JSON.stringify(data));
+			// Отправка на сервер
+			reset();
 		}
 	};
 
@@ -86,7 +76,7 @@ const TripForm = () => {
 							</label>
 						</div>
 						{errors.typeOfFly && (
-							<p className={styles.error}>{errors?.typeOfFly?.message}</p>
+							<p className={styles.error}>{errors.typeOfFly.message?.toString()}</p>
 						)}
 					</div>
 					<div className={styles.dateWrapper}>
@@ -459,7 +449,9 @@ const TripForm = () => {
 								})}
 							/>
 							{errors.dateThere && (
-								<p className={styles.error}>{errors?.dateThere?.message}</p>
+								<p className={styles.error}>
+									{errors.dateThere.message?.toString()}
+								</p>
 							)}
 						</div>
 						{watch('typeOfFly') !== 'oneWay' && (
@@ -478,7 +470,7 @@ const TripForm = () => {
 								/>
 								{errors.dateBack && (
 									<p className={styles.error}>
-										{errors?.dateBack?.message || 'Введите дату возвращения'}
+										{errors.dateBack.message?.toString()}
 									</p>
 								)}
 							</div>
@@ -502,7 +494,9 @@ const TripForm = () => {
 								})}
 							/>
 							{errors.firstName && (
-								<p className={styles.error}>{errors?.firstName?.message}</p>
+								<p className={styles.error}>
+									{errors.firstName.message?.toString()}
+								</p>
 							)}
 						</div>
 						<div className={styles.inputWrapper}>
@@ -514,12 +508,12 @@ const TripForm = () => {
 									required: 'Поле обязательно к заполнению',
 									minLength: {
 										value: 1,
-										message: `Минимальная длина фамилии 1 символ`,
+										message: 'Минимальная длина фамилии 1 символ',
 									},
 								})}
 							/>
 							{errors.surname && (
-								<p className={styles.error}>{errors.surname.message}</p>
+								<p className={styles.error}>{errors.surname.message?.toString()}</p>
 							)}
 						</div>
 						<div className={styles.inputWrapper}>
@@ -546,7 +540,9 @@ const TripForm = () => {
 								})}
 							/>
 							{errors.birthdayDate && (
-								<p className={styles.error}>{errors?.birthdayDate.message}</p>
+								<p className={styles.error}>
+									{errors.birthdayDate.message?.toString()}
+								</p>
 							)}
 						</div>
 						<div className={styles.inputWrapper}>
@@ -568,7 +564,9 @@ const TripForm = () => {
 								})}
 							/>
 							{errors.passport && (
-								<p className={styles.error}>{errors.passport.message}</p>
+								<p className={styles.error}>
+									{errors.passport.message?.toString()}
+								</p>
 							)}
 						</div>
 						<div className={styles.inputWrapper}>
@@ -588,15 +586,13 @@ const TripForm = () => {
 									},
 								})}
 							/>
-							{errors.email && <p className={styles.error}>{errors.email.message}</p>}
+							{errors.email && (
+								<p className={styles.error}>{errors.email.message?.toString()}</p>
+							)}
 						</div>
 					</div>
 					<div className={styles.buttonWrapper}>
-						<button
-							type='button'
-							className={styles.addButton}
-							onClick={() => console.log('Add pass')}
-						>
+						<button type='button' className={styles.addButton}>
 							<img src={addIcon} alt='Добавить' className={styles.addIcon} />
 							Добавить пассажира
 						</button>
@@ -633,7 +629,7 @@ const TripForm = () => {
 					</label>
 				</div>
 				{errors.consentToPrivacy && (
-					<p className={styles.error}>{errors.consentToPrivacy.message}</p>
+					<p className={styles.error}>{errors.consentToPrivacy.message?.toString()}</p>
 				)}
 				<button type='submit' className={styles.yellowButton}>
 					Отправить

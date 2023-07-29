@@ -7,4 +7,3 @@ type ResortsCardType = {
 };
 
 export default ResortsCardType;
-

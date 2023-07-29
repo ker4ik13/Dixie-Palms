@@ -13,22 +13,22 @@ const Footer = () => {
 					<Link to='/' className={styles.link}>
 						Главная
 					</Link>
-					<Link href='#' className={styles.link}>
-						О нас
+					<Link to='/tours' className={styles.link}>
+						Все туры
 					</Link>
 					<Link to='/guide' className={styles.link}>
 						Путеводитель
 					</Link>
-					<Link href='#' className={styles.link}>
+					<Link to='/book-trip' className={styles.link}>
 						Онлайн - бронирование
 					</Link>
-					<Link href='#' className={styles.link}>
+					<Link to='#' className={styles.link}>
 						Акции
 					</Link>
-					<Link href='#' className={styles.link}>
+					<Link to='/blog' className={styles.link}>
 						Блог
 					</Link>
-					<Link href='#' className={styles.link}>
+					<Link to='#' className={styles.link}>
 						Контакты
 					</Link>
 				</div>

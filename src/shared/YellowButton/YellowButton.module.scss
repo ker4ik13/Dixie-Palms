@@ -1,19 +1,19 @@
 @import '@/app/styles/vars';
 
-.button{
+.button {
 	color: $blue;
 	background-color: $main-color;
 	@include T5();
 	padding: 6px 10px;
-	&.medium{
+	&.medium {
 		@include T3();
 		padding: 10px;
 	}
-	&.big{
+	&.big {
 		@include T3();
 		padding: 16px 40px;
 	}
-	&.round{
+	&.round {
 		@include T3();
 		padding: 16px 40px;
 		border-radius: 50px;
@@ -23,8 +23,8 @@
 @media (max-width: 700px) {
 	.button {
 		&.big {
-				padding: 10px 26px;
-				@include T5();
+			padding: 10px 26px;
+			@include T5();
 		}
 		&.medium {
 			@include T5();

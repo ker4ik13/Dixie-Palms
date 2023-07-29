@@ -1,0 +1,11 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import YellowButton from '@/shared/YellowButton/YellowButton';
+import styles from './BookTripHeader.module.scss';
+import yellowPalm from '@/pages/BlogPage/img/yellow-palms.svg';
+import earthIcon from '@/icons/earth-icon.svg';
+import infoIcon from '@/icons/info-icon.svg';
+import { Link } from 'react-router-dom';
+const BookTripHeader = ({ tour }) => {
+    return (_jsx("div", { className: 'container', children: _jsxs("div", { className: styles.header, children: [_jsx("img", { src: tour.src, className: styles.img }), _jsxs("div", { className: styles.description, children: [_jsxs("div", { className: styles.content, children: [_jsx("h3", { className: styles.title, children: tour.title }), _jsxs("div", { className: styles.textWrapper, children: [_jsx("img", { src: earthIcon, className: styles.icon }), _jsxs("p", { className: styles.text, children: ["\u0421\u0442\u0440\u0430\u043D\u0430: ", tour.country] })] }), tour.tourDays && +tour.tourDays === 1 && (_jsxs("p", { className: styles.text, children: ["\u0422\u0443\u0440 \u043D\u0430 ", tour.tourDays, " \u0434\u0435\u043D\u044C"] })), tour.tourDays && +tour.tourDays <= 4 && (_jsxs("p", { className: styles.text, children: ["\u0422\u0443\u0440 \u043D\u0430 ", tour.tourDays, " \u0434\u043D\u044F"] })), tour.tourDays && +tour.tourDays >= 5 && (_jsxs("p", { className: styles.text, children: ["\u0422\u0443\u0440 \u043D\u0430 ", tour.tourDays, " \u0434\u043D\u0435\u0439"] })), _jsxs(Link, { to: `/tours/tour${tour.id}`, className: styles.tourLink, children: [_jsx("p", { className: styles.text, children: "\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E \u0442\u0443\u0440\u0435" }), _jsx("img", { src: infoIcon, alt: '\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E \u0442\u0443\u0440\u0435', className: styles.icon })] }), _jsxs("p", { className: styles.text, children: ["\u041E\u0442\u0435\u043B\u044C: \"", tour.hotel, "\""] })] }), _jsx(YellowButton, { text: '\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435', to: `/tours/tour${tour.id}`, size: 'medium' })] }), _jsx("img", { src: yellowPalm, className: styles.yellowPalm })] }) }));
+};
+export default BookTripHeader;

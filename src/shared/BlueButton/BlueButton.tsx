@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 type BlueButtonProps = {
 	text: string;
 	to: string;
-	callback: () => void;
+	callback?: () => void;
 };
 
 const BlueButton = ({ text, to, callback }: BlueButtonProps) => {

@@ -3,7 +3,11 @@ import bluePalm from '@/widgets/Header/img/blue-palms.svg';
 import realPalm from './img/realPalm.png';
 import TourType from '@/types/TourType';
 
-const TourDescription = ({ tour }: TourType) => {
+type TourDescriptionProps = {
+	tour: TourType;
+};
+
+const TourDescription = ({ tour }: TourDescriptionProps) => {
 	return (
 		<div className={styles.TourDescription}>
 			<div className={styles.firstRow}>

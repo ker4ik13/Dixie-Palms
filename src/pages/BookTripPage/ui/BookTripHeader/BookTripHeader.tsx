@@ -22,13 +22,13 @@ const BookTripHeader = ({ tour }: BookTripHeader) => {
 							<img src={earthIcon} className={styles.icon} />
 							<p className={styles.text}>Страна: {tour.country}</p>
 						</div>
-						{+tour.tourDays === 1 && (
+						{tour.tourDays && +tour.tourDays === 1 && (
 							<p className={styles.text}>Тур на {tour.tourDays} день</p>
 						)}
-						{+tour.tourDays <= 4 && (
+						{tour.tourDays && +tour.tourDays <= 4 && (
 							<p className={styles.text}>Тур на {tour.tourDays} дня</p>
 						)}
-						{+tour.tourDays >= 5 && (
+						{tour.tourDays && +tour.tourDays >= 5 && (
 							<p className={styles.text}>Тур на {tour.tourDays} дней</p>
 						)}
 						<Link to={`/tours/tour${tour.id}`} className={styles.tourLink}>

@@ -1,8 +1,7 @@
 import TourType from '@/types/TourType';
 import { createSlice } from '@reduxjs/toolkit';
 
-const bookedTrip:TourType[] = [];
-
+const bookedTrip: TourType[] = [];
 
 const bookedTripsSlice = createSlice({
 	name: 'bookedTrip',
@@ -16,6 +15,6 @@ const bookedTripsSlice = createSlice({
 	},
 });
 
-export const {addBookTrip} = bookedTripsSlice.actions;
+export const { addBookTrip } = bookedTripsSlice.actions;
 
 export default bookedTripsSlice.reducer;

@@ -1,7 +1,7 @@
-.header{
+.header {
 	margin-top: 50px;
 	width: 100%;
-	background-color: #FDF6CC;
+	background-color: #fdf6cc;
 	height: 600px;
 	display: flex;
 	align-items: center;
@@ -11,10 +11,10 @@
 	z-index: 2;
 	overflow: hidden;
 }
-.header__ellipse{
+.header__ellipse {
 	width: 1220px;
 	height: 900px;
-	background-color: #FDCE00;
+	background-color: #fdce00;
 	border-radius: 50%;
 	position: absolute;
 	left: 0;
@@ -22,55 +22,55 @@
 	transform: translate(-50%, -50%);
 	z-index: 0;
 }
-.header__airplane{
+.header__airplane {
 	position: absolute;
 	left: 35%;
 	top: 45%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 }
-.header__palms{
+.header__palms {
 	position: absolute;
 	left: -200px;
 	top: 0;
 	z-index: 1;
 }
-.header_text{
+.header_text {
 	max-width: 510px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	gap: 20px;
 	flex-direction: column;
-	color: #0C4C60;
+	color: #0c4c60;
 	position: relative;
 	z-index: 3;
 }
-.header__title{
+.header__title {
 	font-size: 26px;
 	font-weight: 800;
 	line-height: 1.2;
 }
-.header__subtitle{
+.header__subtitle {
 	font-size: 16px;
 	line-height: 1.2;
-	opacity: .6;
+	opacity: 0.6;
 }
-.header__button{
-	background-color: #0C4C60;
+.header__button {
+	background-color: #0c4c60;
 	color: #d9d9d9;
 	padding: 14px 40px;
 	border-radius: 50px;
 	font-size: 20px;
 }
 @media (max-width: 1100px) {
-	.header__palms{
+	.header__palms {
 		left: -30%;
 	}
-	.header__airplane{
+	.header__airplane {
 		left: 20%;
 	}
-	.header_text{
+	.header_text {
 		max-width: 400px;
 	}
 	.header__ellipse {
@@ -78,49 +78,48 @@
 	}
 }
 @media (max-width: 900px) {
-	.header{
+	.header {
 		align-items: flex-start;
 		justify-content: center;
 		padding-top: 50px;
 	}
-	.header_text{
+	.header_text {
 		max-width: 500px;
 		align-items: center;
 		text-align: center;
 	}
-	.header__ellipse{
+	.header__ellipse {
 		bottom: -30%;
 		left: 10%;
 		transform: translateX(-50%);
 	}
-	.header__palms{
+	.header__palms {
 		left: -100px;
 		top: auto;
 		bottom: -200px;
 		max-width: 350px;
 	}
-	.header__airplane{
+	.header__airplane {
 		max-width: 450px;
 		top: auto;
 		bottom: -15%;
 		left: 35%;
 	}
-
 }
-@media(max-width: 500px){
-	.header__title{
+@media (max-width: 500px) {
+	.header__title {
 		font-size: 20px;
 	}
-	.header{
+	.header {
 		padding: 30px 16px 0;
 	}
-	.header_text{
+	.header_text {
 		font-size: 16px;
 	}
-	.header__button{
+	.header__button {
 		font-size: 18px;
 	}
-	.header__ellipse{
+	.header__ellipse {
 		width: 500px;
 	}
 }

@@ -1,9 +1,9 @@
 type TourType = {
 	id: string;
 	price?: string;
-	country: string;
-	tourDays: string;
-	hotel: string;
+	country?: string;
+	tourDays?: string;
+	hotel?: string;
 	title: string;
 	title2?: string;
 	description: string;

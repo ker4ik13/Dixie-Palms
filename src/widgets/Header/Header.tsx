@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './header.module.scss';
+import styles from './Header.module.scss';
 import airplane from './img/airplane.png';
 import palms from './img/blue-palms.svg';
 

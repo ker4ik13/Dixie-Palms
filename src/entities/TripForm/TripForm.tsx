@@ -86,6 +86,7 @@ const TripForm = () => {
 							</label>
 							<select
 								className={styles.select}
+								multiple
 								id='departureCity'
 								placeholder='Выбрать город'
 								{...register('departureCity', {
